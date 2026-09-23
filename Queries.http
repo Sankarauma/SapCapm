@@ -1,0 +1,37 @@
+GET http://localhost:4004/odata/v4/product/Products
+
+//Create Records http Post call 
+###
+POST http://localhost:4004/odata/v4/product/Products
+Content-Type: application/json   
+
+{
+   "name": "apple macbook mini",
+    "price": "53417936.86",
+    "discount": 49,
+    "stock": 93
+}
+
+//Read Records http Get call
+
+###
+GET http://localhost:4004/odata/v4/product/Products(1)
+
+//Update Records http Put call
+###
+PATCH http://localhost:4004/odata/v4/product/Products(1)
+Content-Type: application/json  
+
+{
+   "name": "Iphone 18+",
+    
+}
+
+//Delete Records http Delete call
+###
+DELETE http://localhost:4004/odata/v4/product/Products(dbdf9f6f-8bae-478c-9025-911985ead890)
+
+
+//Query Records http Get call
+
+//ANY FILES ENDS WITH HTTP IS REST CLIENT
