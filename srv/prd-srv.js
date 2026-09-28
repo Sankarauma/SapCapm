@@ -7,6 +7,7 @@ import { INSERT } from '@sap/cds/lib/ql/cds-ql.js';
 export class ProductService extends cds.ApplicationService { init() {
 
   const { Products } = cds.entities('ProductService')
+  const { Orders } = cds.entities('OrderMgmtService')
 //CQN - cds query notation 
   // this.on('CREATE',Products, async (req) => {
   //   console.log(req.data); 
@@ -33,6 +34,7 @@ export class ProductService extends cds.ApplicationService { init() {
       result[i].description=result[i].description+" Final Price: "+finalPrice;
     }
   });
+
 
 
   return super.init()
